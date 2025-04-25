@@ -9,21 +9,21 @@ const Projects = () => {
     return(
         <div className="w-full">
             <div className="fixed top-12 z-50 w-full">
-                <div className="bg-background pt-12 w-full md:w-1/2">
+                <div className="bg-background pt-12 w-full xl:w-1/2">
                 </div>
             </div>
-            <div className="w-full fixed top-18 md:top-19 z-100">
-                <div className="pr-4 md:p-0">
+            <div className="w-full fixed top-18 xl:top-19 z-100">
+                <div className="pr-4 xl:p-0">
                     <input type="text" 
                         placeholder="Search by technologies..." 
-                        className="flex justify-start m-2 md:m-4 w-full md:w-[calc(50%-1.5rem)] z-100 p-2 md:p-4 bg-white text-black text-xs md:text-1xl rounded-lg shadow-md" 
+                        className="flex justify-start m-2 xl:m-4 w-full xl:w-[calc(50%-1.5rem)] z-100 p-2 xl:p-4 bg-white text-black text-xs xl:text-1xl rounded-lg shadow-md" 
                         value={searchTerm} 
                         onChange={(e) => setSearchTerm(e.target.value)}/>
                 </div>
             </div>
-            <div className="p-2 md:p-4 pt-0 mt-0 columns-1 sm:columns-1 md:columns-2 gap-4 font-serif">
+            <div className="p-2 xl:p-4 pt-0 mt-0 columns-1 sm:columns-1 xl:columns-2 gap-4 font-serif">
 
-                <div className="pb-11 md:pb-16"></div>
+                <div className="pb-11 xl:pb-16"></div>
 
                 {ProjectInfo
                 .filter((project) =>
@@ -37,9 +37,9 @@ const Projects = () => {
                 )
                 
                 .map((project) => (
-                    <div key={project.id} className="break-inside-avoid relative bg-white rounded-lg shadow-md p-2 md:p-4 mb-4 text-xs md:text-2xl items-center justify-center">
+                    <div key={project.id} className="break-inside-avoid relative bg-white rounded-lg shadow-md p-2 xl:p-4 mb-4 text-xs xl:text-2xl items-center justify-center">
                         <div className="mb-2 p-2 rounded-md shadow-md bg-secondary flex justify-between">
-                            <p className="font-bold text-xs md:text-2xl">{project.name}</p>
+                            <p className="font-bold text-xs xl:text-2xl">{project.name}</p>
                             <p>{project.type} Project</p>
                         </div>
                         <div className="mb-2 relative">
