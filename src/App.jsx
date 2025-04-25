@@ -13,19 +13,22 @@ function App() {
 
   //hover:animate-[spin_10s_linear_infinite]
 
+  /*
+  <div className="fixed bottom-4 right-4">
+          <MusicPanel />
+        </div>
+        */
+
   return (
     <>
-      <div className="bg-amber-50 w-full p-0 m-0 font-serif">
+      <div className="w-full p-0 m-0 font-serif text-primary">
         <Navigation setStep={setStep}/>
-        <div className="absolute top-16 left-0 p-0 m-0 w-screen">
+        <div className="absolute top-19 left-0 p-0 m-0 w-screen">
         {step === "about" && <About />}
         {step === "projects" && <Projects />}
         {step === "experience" && <Experience />}
         {step === "contact" && <Contact />}
         <Footer />
-        </div>
-        <div className="fixed bottom-4 right-4">
-          <MusicPanel />
         </div>
       </div>
     </>

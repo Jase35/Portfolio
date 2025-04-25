@@ -10,7 +10,7 @@ export const ProjectInfo = [
         role: "Backend",
         contributions: "",
         github: "",
-        image: ""
+        image: "friley-frights.png"
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const ProjectInfo = [
         developmentTime: "Spring 2024",
         description: "A parody game satirizing the confusing architecture Friley Hall at Iowa State. The environment constantly rearrages itself out of the player's view while a monster stalks them. I was tasked with developing the procedural generation and monster pathfinding.",
         technologies: ["C#", "GitHub", "Unity"],
-        type: "Team Project",
+        type: "Team",
         role: "Algorithm Design",
         contributions: "Procedural generation and A-Star pathfinding algorithm.",
         github: "https://github.com/Jase35/SE-1860-Game",

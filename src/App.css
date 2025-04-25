@@ -5,8 +5,35 @@
   text-align: center;
 }
 
+:root {
+  --color-primary: #175C8A;
+  --color-secondary: #4A3521;
+  --text-primary: #E8dCC5;
+  --color-background: #f7EED5;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.fixed-position {
+  position: fixed;
+}
+
 body {
-  background-image: url('/images/background.png');
+  background-color: var(--color-background);
   background-size: cover;
   background-position: center;
   height: 100vh;

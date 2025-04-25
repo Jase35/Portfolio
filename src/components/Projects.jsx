@@ -7,13 +7,24 @@ const Projects = () => {
     const [searchTerm, setSearchTerm] = useState("");
     //TODO add sorting by technologies
     return(
-        <>
-            <input type="text" 
-                placeholder="Search by technologies..." 
-                className="m-6 p-4 bg-white rounded-md shadow-md" 
-                value={searchTerm} 
-                onChange={(e) => setSearchTerm(e.target.value)}/>
-            <div className="p-6 pt-0 columns-1 sm:columns-1 lg:columns-2 gap-6 font-serif">
+        <div className="w-full">
+            <div className="fixed top-12 z-50 w-full">
+                <div className="bg-background pt-12 w-full md:w-1/2">
+                </div>
+            </div>
+            <div className="w-full fixed top-18 md:top-19 z-100">
+                <div className="pr-4 md:p-0">
+                    <input type="text" 
+                        placeholder="Search by technologies..." 
+                        className="flex justify-start m-2 md:m-4 w-full md:w-[calc(50%-1.5rem)] z-100 p-2 md:p-4 bg-white text-black text-xs md:text-1xl rounded-lg shadow-md" 
+                        value={searchTerm} 
+                        onChange={(e) => setSearchTerm(e.target.value)}/>
+                </div>
+            </div>
+            <div className="p-2 md:p-4 pt-0 mt-0 columns-1 sm:columns-1 md:columns-2 gap-4 font-serif">
+
+                <div className="pb-11 md:pb-16"></div>
+
                 {ProjectInfo
                 .filter((project) =>
                     project.technologies.some((tech) =>
@@ -26,15 +37,13 @@ const Projects = () => {
                 )
                 
                 .map((project) => (
-                    <div key={project.id} className="break-inside-avoid relative bg-white rounded-lg shadow-md p-6 mb-6 text-2xl items-center justify-center">
-                        <div className="relative text-white">
-                            <div className="absolute top-3 left-3 flex justify-start items-start">
-                                <p className="font-bold text-2xl w-full rounded-md shadow-md bg-white/50">{project.name}</p>
-                                <p>{project.type} Project</p>
-                                <p className="">Role: {project.role}</p>
-                                <p>Purpose: {project.purpose}</p>
-                            </div>
-                            <img alt={project.name} src={"/images/" + project.image} className="rounded-md mt-2" />
+                    <div key={project.id} className="break-inside-avoid relative bg-white rounded-lg shadow-md p-2 md:p-4 mb-4 text-xs md:text-2xl items-center justify-center">
+                        <div className="mb-2 p-2 rounded-md shadow-md bg-secondary flex justify-between">
+                            <p className="font-bold text-xs md:text-2xl">{project.name}</p>
+                            <p>{project.type} Project</p>
+                        </div>
+                        <div className="mb-2 relative">
+                            <img alt={project.name} src={"/images/" + project.image} className="rounded-md" />
                             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t rounded-md from-black to-transparent z-10 pointer-events-none" />
                             <div className="absolute bottom-0">
                                 <div className="flex justify-center items-center m-2">
@@ -44,12 +53,15 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                        <p>{project.description}</p>
-                        <a href={project.github} target="_blank" className="p-2 bg-blue-500 rounded-md shadow-md !text-white">GIT Page</a>
+                        <div className="flex text-black justify-start items-start">
+                            <p>{project.role}</p>
+                            <p className="flex justify-start items-start">{project.description}</p>
+                            <a href={project.github} target="_blank" className="p-2 bg-blue-500 rounded-md shadow-md !text-white">GIT Page</a>
+                        </div>
                     </div>  
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 
