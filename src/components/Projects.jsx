@@ -43,7 +43,7 @@ const Projects = () => {
                             <p>{project.type} Project</p>
                         </div>
                         <div className="mb-2 relative">
-                            <img alt={project.name} src={"/images/" + project.image} className="rounded-md" />
+                            <img alt={project.name} src={"/Portfolio/images/" + project.image} className="rounded-md" />
                             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t rounded-md from-black to-transparent z-10 pointer-events-none" />
                             <div className="absolute bottom-0">
                                 <div className="flex justify-center items-center m-2">
