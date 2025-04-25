@@ -10,11 +10,11 @@ export const ExperienceInfo = {
         },
         {
             id: 2,
-            role: "Floor Clerk",
-            company: "Fareway Meat & Grocery",
-            location: "500 Iowa St, Iowa Falls, IA 50126",
-            startDate: "November 2021",
-            endDate: "Present"
+            role: "CNC Router Operator",
+            company: "Olberding Floors",
+            location: "Iowa Falls, IA",
+            startDate: "January 2021",
+            endDate: "June 2021"
         }
     ],
 
