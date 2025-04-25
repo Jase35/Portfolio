@@ -4,8 +4,8 @@ import {useState} from 'react';
 const Footer = () => {
     return(
         <>
-            <footer className="bottom-0 shadow-md m-0 p-0 w-full left-0 z-50 bg-secondary p-4 md:p-6 text-xs md:text-md">
-                <div className="flex justify-between pb-2 md:pb-4">
+            <footer className="bottom-0 shadow-md m-0 p-0 w-full left-0 z-50 bg-secondary p-4 xl:p-6 text-xs xl:text-md">
+                <div className="flex justify-between pb-2 xl:pb-4">
                     <p className="flex justify-start">&copy; 2025 Jase Beaubien</p>
                     <p className="flex justify-end">jaseb@iastate.edu</p>
                 </div>
