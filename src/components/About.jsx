@@ -5,7 +5,7 @@ const About = () => {
     return(
         <>
             <div className="flex items-stretch flex-col xl:flex-row justify-between items-center gap-2 m-2 xl:gap-4 xl:m-4">
-                <img className="inset-shadow-lg inset-shadow-black w-full xl:w-2/5 rounded-md" alt="profile" src="/images/profile.png" />
+                <img className="inset-shadow-lg inset-shadow-black w-full xl:w-2/5 rounded-md" alt="profile" src={`${import.meta.env.BASE_URL}images/profile.png`} />
                 <div className="bg-white w-full mt-0 mb-0 xl:w-3/5 p-4 rounded-lg bg-secondary inset-shadow-7xl inset-shadow-black">
                     <h1>Summary</h1>
                     <p className="flex justify-start">

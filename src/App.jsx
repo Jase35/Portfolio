@@ -21,6 +21,8 @@ function App() {
 
   return (
     <>
+      <div className="bg-background w-screen h-screen fixed top-0 left-0 z-0">
+      </div>
       <div className="w-full p-0 m-0 font-serif text-primary">
         <Navigation setStep={setStep}/>
         <div className="absolute top-19 left-0 p-0 m-0 w-screen">
